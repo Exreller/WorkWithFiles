@@ -16,33 +16,27 @@ namespace Task1
                 if (path.Exists)
                 {
                    
-                    TimeSpan interval = TimeSpan.FromMinutes(30);
+                    TimeSpan interval = TimeSpan.FromMinutes(30);                    
                     foreach(FileInfo file in path.GetFiles())
                     {
-                        TimeSpan timeSpan = file.CreationTime - DateTime.Now;
+                        TimeSpan timeSpan = DateTime.Now - file.LastAccessTime;
                         if (timeSpan > interval)
                         {
                             file.Delete();
-                            Console.WriteLine("Файлы удалены");
+                            Console.WriteLine("Файл удален");
                         }
-                        else
-                        {
-                            Console.WriteLine("Подходящие файлы не обнаружены");
-                        }
+                        
                     }
                     
                     foreach(DirectoryInfo directory in path.GetDirectories())
                     {
-                        TimeSpan timeSpan = directory.CreationTime - DateTime.Now;
+                        TimeSpan timeSpan = DateTime.Now - directory.LastAccessTime;
                         if(timeSpan > interval)
                         {
                             directory.Delete(true);
-                            Console.WriteLine("Директории удалены");
+                            Console.WriteLine("Папка удалена");
                         }
-                        else
-                        {
-                            Console.WriteLine("Нет подходящих папок к удалению");
-                        }
+                        
                     }
                 }
                 else
