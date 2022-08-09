@@ -21,9 +21,7 @@ namespace Task2
                 foreach (DirectoryInfo di in directoryInfos)
                 {
                     size += Dirsize(di);
-                }
-
-               
+                }               
             }
             catch(Exception ex)
             {

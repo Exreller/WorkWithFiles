@@ -25,8 +25,7 @@ namespace Task1
                         {
                             file.Delete();
                             Console.WriteLine("Файл удален");
-                        }
-                        
+                        }                        
                     }
                     
                     foreach(DirectoryInfo directory in path.GetDirectories())
@@ -36,8 +35,7 @@ namespace Task1
                         {
                             directory.Delete(true);
                             Console.WriteLine("Папка удалена");
-                        }
-                        
+                        }                        
                     }
                 }
                 else

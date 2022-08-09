@@ -23,7 +23,6 @@ namespace Task3
                     size += Dirsize(di);
                 }
 
-
             }
             catch (Exception ex)
             {

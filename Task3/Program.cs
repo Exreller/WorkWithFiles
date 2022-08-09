@@ -49,8 +49,10 @@ namespace Task3
                 Console.WriteLine(e.Message);
             }
         }
+
         static void Main(string[] args)
         {
+
             Console.WriteLine("Для подсчёта размера, введите путь к папке.");
             Console.WriteLine(@"Шаблон ввода: C:\NewFolder");
             string dirPath = Console.ReadLine();
